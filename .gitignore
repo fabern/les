@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.idea
+
+/.quarto/
+_book/
+/_site/
