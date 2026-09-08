@@ -45,7 +45,7 @@ jobs:
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
         with:
-          r-version: '4.5.3'
+          r-version: '4.6.1'
 
       - name: Install spatial dependencies
         run: sudo apt-get install libgdal-dev libproj-dev libgeos-dev libudunits2-dev netcdf-bin
@@ -56,7 +56,8 @@ jobs:
       - name: Install R Dependencies
         uses: r-lib/actions/setup-renv@v2
         with:
-          cache-version: 1
+          cache-version: 2
+          needs: check
 
       # following: https://github.com/quarto-dev/quarto-actions/blob/main/examples/example-04-render-no-publish.md
       - name: Render Quarto Project
