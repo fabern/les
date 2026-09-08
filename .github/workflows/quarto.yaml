@@ -51,13 +51,12 @@ jobs:
         run: sudo apt-get install libgdal-dev libproj-dev libgeos-dev libudunits2-dev netcdf-bin
 
       - name: Install further dependencies
-        run: sudo apt-get install libfontconfig1-dev libharfbuzz-dev libfribidi-dev libsecret-1-dev libtbb-dev
+        run: sudo apt-get install libfontconfig1-dev libharfbuzz-dev libfribidi-dev libsecret-1-dev
 
       - name: Install R Dependencies
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 2
-          needs: check
 
       # following: https://github.com/quarto-dev/quarto-actions/blob/main/examples/example-04-render-no-publish.md
       - name: Render Quarto Project
